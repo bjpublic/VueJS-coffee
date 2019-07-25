@@ -1,0 +1,29 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>제목</title>
+</head>
+<body>
+  <div id="div1">
+    <div id="div2">
+      <button id="button">클릭해주세요</button>
+    </div>
+  </div>
+  <script>
+    function handler1 () {
+      console.log(1)
+    }
+    function handler2 () {
+      console.log(2)
+    }
+    function handler3 () {
+      console.log(3)
+    }
+
+    // addEventListener 메소드를 사용하여 이벤트 리스너를 등록한다.
+    document.getElementById('div1').addEventListener('click', handler1, true);
+    document.getElementById('div2').addEventListener('click', handler2, true);
+    document.getElementById('button').addEventListener('click', handler3, true);
+  </script>
+</body>
+</html>

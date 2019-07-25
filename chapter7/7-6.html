@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>제목</title>
+</head>
+<body>
+  <div onclick="handler1()">
+    <div onclick="handler2()">
+      <!-- 이벤트 핸들러의 인자로 이벤트 객체를 넘겨준다 -->
+      <button onclick="handler3(event)">클릭해주세요</button>
+    </div>
+  </div>
+  <script>
+    function handler1 () {
+      console.log(1)
+    }
+    function handler2 () {
+      console.log(2)
+    }
+    function handler3 (event) {
+      // 상위 요소로의 이벤트 전파를 막는다.
+      event.stopPropagation()
+      console.log(3)
+    }
+  </script>
+</body>
+</html>
